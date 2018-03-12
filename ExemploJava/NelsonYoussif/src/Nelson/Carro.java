@@ -1,0 +1,31 @@
+package Nelson;
+
+public class Carro {
+
+	private String motor;
+	 String modelo;
+ String cor;
+	
+	
+	public void ligar(){
+	System.out.println("Ligando");
+	}
+	public void desligar(){
+	System.out.println("Desligando");	
+	}
+    public void acelerar(){
+    System.out.println("Acelerando");
+    
+    }
+    public void brecar(){
+	System.out.println("Brecando");
+}
+   public void mudarMarcha(){
+	System.out.println("Mudando");
+	
+   }
+
+
+
+
+}
