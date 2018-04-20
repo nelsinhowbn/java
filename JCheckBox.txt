@@ -1,0 +1,43 @@
+package view;
+
+import java.awt.Container;
+
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
+public class Tela extends JFrame{
+	
+	JTextArea txtTexto = new JTextArea("Digite seu texto aqui!",15,30);
+	JScrollPane barra = new JScrollPane(txtTexto);
+	JCheckBox chkOpcao01;
+	
+	public Tela() {
+		super("Exemplo de tela");
+		
+		Container pane = this.getContentPane();
+		pane.setLayout(null);
+		
+		barra.setHorizontalScrollBarPolicy(
+				JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+
+		barra.setVerticalScrollBarPolicy(
+				JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		
+		barra.setBounds(20, 20, 360, 150);
+		pane.add(barra);
+		
+		chkOpcao01 = new JCheckBox("Opção 01");
+		chkOpcao01.setBounds(20, 180, 100, 20);
+		pane.add(chkOpcao01);
+		
+		this.setSize(400,500);
+		this.setResizable(false);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+	}
+	public static void main(String args[]) {
+		Tela tela = new Tela();
+	}
+}
