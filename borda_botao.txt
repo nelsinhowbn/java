@@ -1,0 +1,2 @@
+seuJButton.setBorder(null);
+seuJButton.setContentAreaFilled(false);

@@ -1,0 +1,13 @@
+sete.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//System.out.println("7");
+				
+				if(visor.getText().equals("7")) {
+					visor.setText(visor.getText() + "7");
+				}else {
+					visor.setText("7");
+				}
+				
+				
+			}
+		});

@@ -1,0 +1,37 @@
+package view;
+
+import java.awt.Container;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+
+public class Calculadora extends JFrame{
+	
+	JTextField txtVisor = new JTextField();
+	
+	JButton btnMC = new JButton("MC");
+	JButton btnMR = new JButton("MR");
+	JButton btnMS = new JButton("MS");
+	JButton btnMais = new JButton("M+");
+	JButton btnMenos = new JButton("M-");
+
+
+	public Calculadora() {
+		super("Calculadora");
+		
+		Container paine = this.getContentPane();
+		paine.setLayout(null);
+		
+		txtVisor.setBounds(20, 20, 180, 20);
+		paine.add(txtVisor);
+		
+		this.setSize(300, 500);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setResizable(false);
+	}
+	public static void main(String args[]) {
+		Calculadora calc = new Calculadora();
+	}
+}
