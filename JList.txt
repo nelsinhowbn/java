@@ -1,0 +1,39 @@
+package view;
+
+import java.awt.Container;
+
+import javax.swing.JFrame;
+import javax.swing.JList;
+import javax.swing.JScrollPane;
+
+public class Tela extends JFrame{
+	
+	JList ltsEstados;
+	JScrollPane scrollpane;
+	
+	public Tela() {
+		super("Exemplo de Interface");
+		
+		Container pane = this.getContentPane();
+		pane.setLayout(null);
+		
+		String estados[] = {"SP","RJ","AM","PA","MG"};
+		
+		ltsEstados = new JList(estados);
+		scrollpane = new JScrollPane(ltsEstados);
+		
+		scrollpane.setBounds(20, 20, 100, 80);
+		pane.add(scrollpane);
+		
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setSize(500, 500);
+		this.setResizable(false); //formulário não pode ter seu tamanho redefinido
+		this.setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Tela tela = new Tela();
+	}
+
+}
