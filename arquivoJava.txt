@@ -1,0 +1,19 @@
+package aula;
+
+import java.io.FileWriter;
+import java.io.PrintWriter;
+
+public class Arquivo {
+	
+	public static void main(String args[]) throws Exception {
+		
+		
+		 FileWriter arq = new FileWriter("d:\\teste.txt");
+		 PrintWriter gravarArq = new PrintWriter(arq);
+		 
+		 for(int i = 0; i < 1000; i++) {
+			 gravarArq.println("valor de i: " + i); 
+		 }
+		 arq.close();
+	}
+}
